@@ -1,8 +1,12 @@
+--_DO_NOT_SHARE_THIS_AS_IF_U_SHARE_THIS__YOU_WILL_CAUSE_A_HUGE_DISASTER_AGAIN_DO_NOT_USE_THIS_AS_THIS_SCRIPT_IS_DANGEROUS!!!!_--
+
 -- Define the list of blacklisted players
 local blacklistedPlayers = {
-    "RET_URNTIX",
-    "NebulaNight2090",
-    "weerawatR15"
+    "blacklistPLS",
+    "blacklistPLS",
+    "blacklistPLS",
+    "blacklistPLS",
+    "blacklistPLS"
 }
 
 -- Create a variable to keep track of whether the system is enabled or not
