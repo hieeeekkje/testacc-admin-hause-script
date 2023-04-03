@@ -1,0 +1,58 @@
+-- Define the list of blacklisted players
+local blacklistedPlayers = {
+    "RET_URNTIX",
+    "BLACKLISTED_PLAYER2",
+    "BLACKLISTED_PLAYER3"
+}
+
+-- Create a variable to keep track of whether the system is enabled or not
+local systemEnabled = false
+
+-- Function to enable the system
+local function enableSystem()
+    systemEnabled = true
+    game.Players.LocalPlayer:Chat(":chatnotifyc all 0 255 100 Auto-kicking Blacklisted Player system has been enabled. Any attempt by blacklisted players that trying join the game will result in severe consequences. We will not tolerate any disruptive behavior.")
+end
+
+-- Function to disable the system
+local function disableSystem()
+    systemEnabled = false
+    game.Players.LocalPlayer:Chat(":chatnotifyc all 255 0 0 Auto-kicking Blacklist players system has been disabled.")
+end
+
+-- Function to check if a player is blacklisted and execute commands on them if they are
+local function checkBlacklisted(player)
+    for _, blacklistedPlayer in pairs(blacklistedPlayers) do
+        if player.Name == blacklistedPlayer then
+            game.Players:Chat(":r6 " .. blacklistedPlayer .. " | :fov " .. blacklistedPlayer .. " 30 | :talk " .. blacklistedPlayer .. " ae! | :tp " .. blacklistedPlayer .. " wp-kidnap")
+        end
+    end
+end
+
+-- Continuously loop through all players in the game
+while true do
+    for _, player in pairs(game.Players:GetPlayers()) do
+        if systemEnabled then
+            checkBlacklisted(player)
+        end
+    end
+    
+    -- Wait for a new player to join the game
+    game.Players.PlayerAdded:Connect(function(player)
+        if systemEnabled then
+            checkBlacklisted(player)
+        end
+    end)
+    
+    -- Wait for the LocalPlayer to type the command to enable/disable the system
+    game.Players.LocalPlayer.Chatted:Connect(function(message)
+        if message == "?enable" then
+            enableSystem()
+        elseif message == "?disable" then
+            disableSystem()
+        end
+    end)
+    
+    -- Wait for 5 seconds before starting the loop again
+    wait(5)
+end
