@@ -19,9 +19,9 @@ local blacklistedPlayers = {
     "EastonOU812",
     "Barreleye2",
     "CherishClayton",
-    "fatahabahusni2",
     "SoldierZeroIn"
 }
+--load scary baaba emu crasah
 local args = {
     [1] = {
         [1] = "LOAD",
