@@ -22,7 +22,14 @@ local blacklistedPlayers = {
     "fatahabahusni2",
     "SoldierZeroIn"
 }
+local args = {
+    [1] = {
+        [1] = "LOAD",
+        [2] = "cr"
+    }
+}
 
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("BuildSaving"):InvokeServer(unpack(args))
 -- Create a variable to keep track of whether the system is enabled or not
 local systemEnabled = false
 
