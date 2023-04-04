@@ -127,7 +127,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(message)
     if message == ".enable" then
         enableSystem()
         checkAllPlayers()
-    elseif message == ".p" then
+    elseif message == ".disable" then
         disableSystem()
     end
 end)
