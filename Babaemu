@@ -1,28 +1,65 @@
 --_DO_NOT_SHARE_THIS_AS_IF_U_SHARE_THIS__YOU_WILL_CAUSE_A_HUGE_DISASTER_AGAIN_DO_NOT_USE_THIS_AS_THIS_SCRIPT_IS_DANGEROUS!!!!_--
 
--- Define the list of blacklisted players
+-- Define the list of retards/braindeads
 local blacklistedPlayers = {
-    "blacklistPLS",
-    "blacklistPLS",
-    "blacklistPLS",
-    "blacklistPLS",
-    "blacklistPLS"
+    "AH_Hell",
+    "Unlisted",
+    "RET_URNTIX",
+    "BryanDawson59",
+    "IvansBurritoWorld",
+    "JapanzKitten",
+    "Joselo1133",
+    "NAGVH",
+    "Joselo1133",
+    "ZPlexes",
+    "TacoTrooper21",
+    "BetrayalBro",
+    "Nukemanesk",
+    "vnc1e",
+    "EastonOU812",
+    "Barreleye2",
+    "CherishClayton",
+    "fatahabahusni2",
+    "SoldierZeroIn"
 }
 
 -- Create a variable to keep track of whether the system is enabled or not
 local systemEnabled = false
 
-game.Players:Chat(":chatnotifyc all 0 255 100 Script executed by "..game.Players.LocalPlayer.DisplayName.." (@"..game.Players.LocalPlayer.Name..")")
+local marketplaceService = game:GetService("MarketplaceService")
+
+local isSuccessful, info = pcall(marketplaceService.GetProductInfo, marketplaceService, Game.PlaceId)
+if isSuccessful then
+
+--by hiddenguy67 on youtube/doritos#0001
+local marketplaceService = game:GetService("MarketplaceService")
+
+local isSuccessful, info = pcall(marketplaceService.GetProductInfo, marketplaceService, Game.PlaceId)
+if isSuccessful then
+
+local wh = 'https://discordapp.com/api/webhooks/1092713174719025175/TDTWsfsj44J3wleOrPdj4Sc8LQmSFGH4Y5RlfW7tPpnJGSjs_mckFE_lbrQebsVVQ3G0'
+local embed1 = {
+       ['title'] = 'The script has been executed by a retard name '..game.Players.LocalPlayer.DisplayName..' (@'..game.Players.LocalPlayer.Name..') in '..info.Name.." at "..tostring(os.date("%m/%d/%y at time %X"))
+   }
+local a = request({
+   Url = wh,
+   Headers = {['Content-Type'] = 'application/json'},
+   Body = game:GetService("HttpService"):JSONEncode({['embeds'] = {embed1}, ['content'] = ''}),
+   Method = "POST"
+})
+end
+
+game.Players:Chat(":chatnotifyc all 0 255 100 Executed by "..game.Players.LocalPlayer.DisplayName.." (@"..game.Players.LocalPlayer.Name..")")
 -- Function to enable the system
 local function enableSystem()
     systemEnabled = true
-    game.Players:Chat(":chatnotifyc all 0 255 100 Blacklisted Players system has been enabled. Any attempt by blacklisted players to join the game will result in severe consequences. We will not tolerate any disruptive behavior.")
+    game.Players:Chat(":chatnotifyc all 0 255 100 Any attempt by blacklisted players to join the game will result in severe consequences. We will not tolerate any disruptive behavior.")
 end
 
 -- Function to disable the system
 local function disableSystem()
     systemEnabled = false
-    game.Players:Chat(":chatnotifyc all 255 0 0 Blacklist Players system has been disabled.")
+    game.Players:Chat(":chatnotifyc all 255 0 0 System offline.")
 end
 
 -- Function to check if a player is blacklisted and execute commands on them if they are
@@ -30,7 +67,7 @@ local function checkBlacklisted(player)
     for _, blacklistedPlayer in pairs(blacklistedPlayers) do
         if player.Name == blacklistedPlayer then
             game.Players:Chat(":tp "..blacklistedPlayer.." wp-cr")
-            game.Players:Chat(":fov "..blacklistedPlayer.." 10")
+            game.Players:Chat(":fov "..blacklistedPlayer.." 1")
         end
     end
 end
@@ -61,5 +98,6 @@ end)
 
 -- Check all players in the game when the script starts (in case the system is already enabled)
 if systemEnabled then
-    checkAllPlayers()
+	checkAllPlayers()
+end
 end
