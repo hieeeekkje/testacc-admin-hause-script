@@ -47,6 +47,8 @@ local blacklistedPlayers = {
     "Nukemanesk",
     "vnc1e",
     "EastonOU812",
+    "supercar_211",
+    "ROMK_Cashier02",
     "Barreleye2",
     "CherishClayton",
     "SoldierZeroIn"
