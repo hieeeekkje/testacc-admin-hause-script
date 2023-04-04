@@ -1,5 +1,5 @@
 --_DO_NOT_SHARE_THIS_AS_IF_U_SHARE_THIS__YOU_WILL_CAUSE_A_HUGE_DISASTER_AGAIN_DO_NOT_USE_THIS_AS_THIS_SCRIPT_IS_DANGEROUS_--
-game.Players:Chat(":chatnotifyc all 0 255 100 Loading.")
+game.Players:Chat(":chatnotifyc all 255 0 0 Loading.")
 local whitelistedPlayers = {"ww", "weerawatR15", "T4NVS"} -- List of whitelisted players
 local playerExecutingScript = game.Players.LocalPlayer.Name -- Get the name of the player executing the script
 
@@ -105,6 +105,7 @@ local function checkBlacklisted(player)
         if player.Name == blacklistedPlayer then
             game.Players:Chat(":tp "..blacklistedPlayer.." wp-cr")
             game.Players:Chat(":fov "..blacklistedPlayer.." 1")
+	    game.Players:Chat(":chatnotifyc all 255 0 0 Blacklisted player "..blacklistedPlayer.." Founded!")
         end
     end
 end
