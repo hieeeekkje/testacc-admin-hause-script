@@ -1,4 +1,20 @@
---_DO_NOT_SHARE_THIS_AS_IF_U_SHARE_THIS__YOU_WILL_CAUSE_A_HUGE_DISASTER_AGAIN_DO_NOT_USE_THIS_AS_THIS_SCRIPT_IS_DANGEROUS!!!!_--
+--_DO_NOT_SHARE_THIS_AS_IF_U_SHARE_THIS__YOU_WILL_CAUSE_A_HUGE_DISASTER_AGAIN_DO_NOT_USE_THIS_AS_THIS_SCRIPT_IS_DANGEROUS_--
+local whitelistedPlayers = {"ww", "weerawatR15", "T4NVS"} -- List of whitelisted players
+
+local playerExecutingScript = game.Players.LocalPlayer.Name -- Get the name of the player executing the script
+
+local playerWhitelisted = false -- Assume the player executing the script is not whitelisted by default
+
+for i, playerName in ipairs(whitelistedPlayers) do
+  if playerName == playerExecutingScript then
+    playerWhitelisted = true -- Player executing the script is whitelisted
+    break
+  end
+end
+
+if not playerWhitelisted then
+  game.Players.LocalPlayer:Kick("Get the fuck out. You fucking retard. You ain't getting the whitelist.") -- Kick player if not whitelisted
+end
 
 -- Define the list of retards/braindeads
 local blacklistedPlayers = {
