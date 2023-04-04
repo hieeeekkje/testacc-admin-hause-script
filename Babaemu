@@ -31,7 +31,7 @@ local marketplaceService = game:GetService("MarketplaceService")
 local isSuccessful, info = pcall(marketplaceService.GetProductInfo, marketplaceService, Game.PlaceId)
 if isSuccessful then
 
---by hiddenguy67 on youtube/doritos#0001
+
 local marketplaceService = game:GetService("MarketplaceService")
 
 local isSuccessful, info = pcall(marketplaceService.GetProductInfo, marketplaceService, Game.PlaceId)
