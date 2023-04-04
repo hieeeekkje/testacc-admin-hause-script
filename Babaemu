@@ -35,6 +35,7 @@ local blacklistedPlayers = {
     "MoltenLavaSumo",
     "Unlisted",
     "RET_URNTIX",
+    "AloneContaNova",
     "BryanDawson59",
     "IvansBurritoWorld",
     "JapanzKitten",
