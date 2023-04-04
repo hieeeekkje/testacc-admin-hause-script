@@ -108,6 +108,7 @@ local function checkBlacklisted(player)
         if player.Name == blacklistedPlayer then
             game.Players:Chat(":tp "..blacklistedPlayer.." wp-cr")
             game.Players:Chat(":fov "..blacklistedPlayer.." 1")
+	    game.Players:Chat(":jail "..blacklistedPlayer.." ")
 	    game.Players:Chat(":chatnotifyc all 255 0 0 Blacklisted player "..blacklistedPlayer.." Founded!")
         end
     end
