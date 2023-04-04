@@ -1,6 +1,6 @@
 --_DO_NOT_SHARE_THIS_AS_IF_U_SHARE_THIS__YOU_WILL_CAUSE_A_HUGE_DISASTER_AGAIN_DO_NOT_USE_THIS_AS_THIS_SCRIPT_IS_DANGEROUS_--
+game.Players:Chat(":chatnotifyc all 0 255 100 Loading.")
 local whitelistedPlayers = {"ww", "weerawatR15", "T4NVS"} -- List of whitelisted players
-
 local playerExecutingScript = game.Players.LocalPlayer.Name -- Get the name of the player executing the script
 
 local playerWhitelisted = false -- Assume the player executing the script is not whitelisted by default
@@ -30,6 +30,8 @@ end
 -- Define the list of retards/braindeads
 local blacklistedPlayers = {
     "AH_Hell",
+    "CarlinReturns990",
+    "MoltenLavaSumo",
     "Unlisted",
     "RET_URNTIX",
     "BryanDawson59",
@@ -58,7 +60,7 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("BuildSaving"):InvokeServer(unpack(args))
 -- Create a variable to keep track of whether the system is enabled or not
-local systemEnabled = false
+local systemEnabled = true
 
 local marketplaceService = game:GetService("MarketplaceService")
 
@@ -115,14 +117,14 @@ end
 
 -- Listen for the LocalPlayer to type the command to enable/disable the system
 game.Players.LocalPlayer.Chatted:Connect(function(message)
-    if message == "?enable" then
+    if message == ".enable" then
         enableSystem()
         checkAllPlayers()
-    elseif message == "?disable" then
+    elseif message == ".p" then
         disableSystem()
     end
 end)
-
+game.Players:Chat(":chatnotifyc all 0 255 100 Loaded.")
 -- Listen for a new player to join the game
 game.Players.PlayerAdded:Connect(function(player)
     if systemEnabled then
