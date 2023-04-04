@@ -30,6 +30,7 @@ end
 -- Define the list of retards/braindeads
 local blacklistedPlayers = {
     "AH_Hell",
+    "oddbot666",
     "CarlinReturns990",
     "MoltenLavaSumo",
     "Unlisted",
