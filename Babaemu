@@ -13,7 +13,18 @@ for i, playerName in ipairs(whitelistedPlayers) do
 end
 
 if not playerWhitelisted then
-  game.Players.LocalPlayer:Kick("Get the fuck out. You fucking retard. You ain't getting the whitelist.") -- Kick player if not whitelisted
+while true do
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+    Title = "Hey!", -- Required
+    Text = "Don't try to use my fucking script you retard!", -- Required
+    Icon = "rbxassetid://" -- Optional
+})
+end
+while  true do
+	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I am a script kiddie I love skidding people script!!!", "All")
+end
+wait(5)
+game.Players.LocalPlayer:Kick("Get the fuck out. You fucking retard. You ain't getting the whitelist.") -- Kick player if not whitelisted
 end
 
 -- Define the list of retards/braindeads
